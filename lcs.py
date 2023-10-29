@@ -23,7 +23,7 @@ for size in input_sizes:
     str1 = generate_random_string(size)
     str2 = generate_random_string(size)
 
-    if size == 10:
+    if size <= 20:
         print(f"str1: {str1}")
         print(f"str2: {str2}")
 
