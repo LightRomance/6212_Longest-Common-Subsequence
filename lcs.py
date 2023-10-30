@@ -41,7 +41,7 @@ for size in input_sizes:
         print(f"str2: {str2}")
 
     start_time = time.time()
-    result = longestCommonSubsequence(str1, str2)
+    result_length, result_string = longestCommonSubsequence(str1, str2)
     end_time = time.time()
 
     execution_time = end_time - start_time
