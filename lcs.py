@@ -31,7 +31,7 @@ def longestCommonSubsequence(str1, str2) -> (int, str):
     return dp[-1][-1], ''.join(lcs)
 
 # Test time complexity
-input_sizes = [10, 50, 100, 500, 1000, 10000]  # Different lengths of strings
+input_sizes = [10, 50, 100, 500, 1000, 5000, 10000]  # Different lengths of strings
 for size in input_sizes:
     str1 = generate_random_string(size)
     str2 = generate_random_string(size)
@@ -44,8 +44,8 @@ for size in input_sizes:
     result_length, result_string = longestCommonSubsequence(str1, str2)
     end_time = time.time()
 
-    execution_time = end_time - start_time
-    print(f"Input size: {size}, Execution time: {execution_time:.6f} seconds")
+    execution_time = (end_time - start_time) * 1000000000
+    print(f"Input size: {size}, Execution time: {execution_time:.0f} ns")
     
     # Show LCS length and String to verify
     if size <= 100:
